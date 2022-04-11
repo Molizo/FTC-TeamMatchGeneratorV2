@@ -24,7 +24,7 @@ internal class Program
         Application.Init();
         var top = Application.Top;
 
-        win = new Window("FTC Team Match Generator V2")
+        win = new Window("FTC Team Match Generator V2.1")
         {
             X = 0,
             Y = 1, // Leave one row for the toplevel menu
@@ -140,7 +140,7 @@ internal class Program
         };
 
         win.RemoveAll();
-        win.Title = "FTC Team Match Generator V2 - Event info - " + ev.code;
+        win.Title = "FTC Team Match Generator V2.1 - Event info - " + ev.code;
         win.Add(eventLabel, teamsListContainer, matchesListContainer, exportButton, goBackButton);
     }
 
@@ -237,7 +237,7 @@ internal class Program
         };
 
         win.RemoveAll();
-        win.Title = "FTC Team Match Generator V2 - Configure export - " + ev.code;
+        win.Title = "FTC Team Match Generator V2.1 - Configure export - " + ev.code;
         win.Add(headerLabel, pageWidthLabel, pageHeightLabel, pageSizeReferenceLabel, providedByLabel, pageWidthTextField, pageHeightTextField, providedByTextField, exportButton, goBackButton);
     }
 
@@ -285,7 +285,7 @@ internal class Program
         };
 
         win.RemoveAll();
-        win.Title = "FTC Team Match Generator V2 - ONLINE Event selection - " + selectedSeason + "-" + (selectedSeason + 1) + " season";
+        win.Title = "FTC Team Match Generator V2.1 - ONLINE Event selection - " + selectedSeason + "-" + (selectedSeason + 1) + " season";
         win.Add(eventLabel, eventsListContainer, goBackButton);
     }
 
@@ -328,7 +328,7 @@ internal class Program
         };
 
         win.RemoveAll();
-        win.Title = "FTC Team Match Generator V2 - ONLINE Teams list - Season " + selectedSeason;
+        win.Title = "FTC Team Match Generator V2.1 - ONLINE Teams list - Season " + selectedSeason;
         win.Add(eventLabel, eventsListContainer, goBackButton);
     }
 
@@ -401,7 +401,7 @@ internal class Program
         offlineOperationsContainer.Add(continueToOfflineImport);
 
         win.RemoveAll();
-        win.Title = "FTC Team Match Generator V2 - Main menu";
+        win.Title = "FTC Team Match Generator V2.1 - Main menu";
         win.Add(onlineOperationsContainer, offlineOperationsContainer);
     }
 }

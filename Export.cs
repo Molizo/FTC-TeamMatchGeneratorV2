@@ -30,7 +30,7 @@ namespace TeamMatchGenV2
                             .AlignCenter()
                             .PaddingBottom(2)
                             .Text("#" + team.teamNumber + " " + team.teamName)
-                            .FontSize(12)
+                            .FontSize(15)
                             .Weight(FontWeight.ExtraBold);
                         page.Footer()
                             .AlignRight()
@@ -49,10 +49,10 @@ namespace TeamMatchGenV2
 
                             table.Header(header =>
                             {
-                                header.Cell().Text("#").FontSize(11.5f).Weight(FontWeight.Bold);
-                                header.Cell().AlignCenter().Text("Partner").FontSize(11.5f).Weight(FontWeight.Bold);
-                                header.Cell().AlignCenter().Text("Opponent 1").FontSize(11.5f).Weight(FontWeight.Bold);
-                                header.Cell().AlignCenter().Text("Opponent 2").FontSize(11.5f).Weight(FontWeight.Bold);
+                                header.Cell().AlignCenter().Text("#").FontSize(12f).Weight(FontWeight.Bold);
+                                header.Cell().AlignCenter().Text("Partner").FontSize(12f).Weight(FontWeight.Bold);
+                                header.Cell().AlignCenter().Text("Opponent 1").FontSize(12f).Weight(FontWeight.Bold);
+                                header.Cell().AlignCenter().Text("Opponent 2").FontSize(12f).Weight(FontWeight.Bold);
 
                                 header.Cell().ColumnSpan(4)
                                     .PaddingVertical(5).BorderBottom(1).BorderColor(Colors.Black);
@@ -61,12 +61,12 @@ namespace TeamMatchGenV2
                             // step 3
                             foreach (var match in team.matches)
                             {
-                                table.Cell().Element(TeamNumberCellStyle).Text(match.matchNumber).FontSize(11.5f).Weight(FontWeight.Bold).FontColor(match.isBlueTeam ? "#0000FF" : "#FF0000");
-                                table.Cell().Element(TeamNumberCellStyle).AlignCenter().Text(match.pNumber).FontSize(11.5f).FontColor(match.isBlueTeam ? "#0000FF" : "#FF0000");
-                                table.Cell().Element(TeamNumberCellStyle).AlignCenter().Text(match.o1Number).FontSize(11.5f).FontColor(!match.isBlueTeam ? "#0000FF" : "#FF0000");
-                                table.Cell().Element(TeamNumberCellStyle).AlignCenter().Text(match.o2Number).FontSize(11.5f).FontColor(!match.isBlueTeam ? "#0000FF" : "#FF0000");
+                                table.Cell().Element(TeamNumberCellStyle).AlignCenter().Text(match.matchNumber).FontSize(12f).Weight(FontWeight.Bold).FontColor(match.isBlueTeam ? "#0000FF" : "#FF0000");
+                                table.Cell().Element(TeamNumberCellStyle).AlignCenter().Text(match.pNumber).FontSize(12f).FontColor(match.isBlueTeam ? "#0000FF" : "#FF0000");
+                                table.Cell().Element(TeamNumberCellStyle).AlignCenter().Text(match.o1Number).FontSize(12f).FontColor(!match.isBlueTeam ? "#0000FF" : "#FF0000");
+                                table.Cell().Element(TeamNumberCellStyle).AlignCenter().Text(match.o2Number).FontSize(12f).FontColor(!match.isBlueTeam ? "#0000FF" : "#FF0000");
 
-                                table.Cell().Element(TeamNameCellStyle).Text("");
+                                table.Cell().Element(TeamNameCellStyle).AlignCenter().Text(match.isBlueTeam ? "Blue" : "Red").FontSize(9.5f).FontColor(match.isBlueTeam ? "#0000FF" : "#FF0000");
                                 table.Cell().Element(TeamNameCellStyle).AlignCenter().Text(match.pName).FontSize(9.5f).FontColor(match.isBlueTeam ? "#0000FF" : "#FF0000");
                                 table.Cell().Element(TeamNameCellStyle).AlignCenter().Text(match.o1Name).FontSize(9.5f).FontColor(!match.isBlueTeam ? "#0000FF" : "#FF0000");
                                 table.Cell().Element(TeamNameCellStyle).AlignCenter().Text(match.o2Name).FontSize(9.5f).FontColor(!match.isBlueTeam ? "#0000FF" : "#FF0000");
