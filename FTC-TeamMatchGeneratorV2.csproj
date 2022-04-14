@@ -6,6 +6,8 @@
     <RootNamespace>TeamMatchGenV2</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+	<PublishSingleFIle>true</PublishSingleFIle>
   </PropertyGroup>
 
   <ItemGroup>
